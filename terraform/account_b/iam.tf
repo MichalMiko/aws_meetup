@@ -68,7 +68,7 @@ resource "aws_iam_role" "demo_role" {
       {
         Effect = "Allow"
         Principal = {
-          AWS = "arn:aws:iam::441240919286:root"
+          AWS = "arn:aws:iam::<ACCOUNT_NUMBER>:root"
         }
         Action = "sts:AssumeRole"
       },
@@ -120,7 +120,7 @@ resource "aws_iam_role" "poc_role" {
       {
         Effect = "Allow"
         Principal = {
-          AWS = "arn:aws:iam::441240919286:root"
+          AWS = "arn:aws:iam::<ACCOUNT_NUMBER>:root"
         }
         Action = "sts:AssumeRole"
       }

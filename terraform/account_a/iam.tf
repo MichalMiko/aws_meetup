@@ -8,7 +8,7 @@ resource "aws_iam_policy" "demo_iam_policy" {
       {
         Effect   = "Allow"
         Action   = "sts:AssumeRole"
-        Resource = "arn:aws:iam::441240919286:role/demo-role"
+        Resource = "arn:aws:iam::<ACCOUNT_NUMBER>:role/demo-role"
       }
     ]
   })
@@ -53,7 +53,7 @@ resource "aws_iam_policy" "unique_iam_policy" {
       {
         Effect   = "Allow"
         Action   = "sts:AssumeRole"
-        Resource = "arn:aws:iam::441240919286:role/demo-role"
+        Resource = "arn:aws:iam::<ACCOUNT_NUMBER>:role/demo-role"
       }
     ]
   })
