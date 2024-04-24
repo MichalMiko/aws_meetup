@@ -1,9 +1,11 @@
-# Unique identifiers
+# Unique identifiers (DEMO)
+Docs: https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_identifiers.html#identifiers-unique-ids
 
+# Policy Versions (DEMO)
 ```
 export $(printf "AWS_ACCESS_KEY_ID=%s AWS_SECRET_ACCESS_KEY=%s AWS_SESSION_TOKEN=%s" \
 $(aws sts assume-role \
---role-arn arn:aws:iam::441240919286:role/demo-role \
+--role-arn arn:aws:iam::<ACCOUNT_NUMBER>:role/demo-role \
 --role-session-name DemoSession \
 --query "Credentials.[AccessKeyId,SecretAccessKey,SessionToken]" \
 --output text))
@@ -20,24 +22,24 @@ aws iam list-attached-role-policies \
 
 ```
 aws iam get-policy \
-    --policy-arn arn:aws:iam::441240919286:policy/demo-policy
+    --policy-arn arn:aws:iam::<ACCOUNT_NUMBER>:policy/demo-policy
 ```
 
 ```
-aws iam get-policy-version \
-    --policy-arn arn:aws:iam::441240919286:policy/demo-policy \
-    --version-id v2
+aws iwam get-policy-version \
+    --policy-arn arn:aws:iam::<ACCOUNT_NUMBER>:policy/demo-policy \
+    --version-id v1
 ```
 
 ```
 aws iam set-default-policy-version \
-    --policy-arn arn:aws:iam::441240919286:policy/demo-policy \
-    --version-id v2
+    --policy-arn arn:aws:iam::<ACCOUNT_NUMBER>:policy/demo-policy \
+    --version-id v1
 ```
 
 ```
 aws iam get-policy \
-    --policy-arn arn:aws:iam::441240919286:policy/demo-policy
+    --policy-arn arn:aws:iam::<ACCOUNT_NUMBER>:policy/demo-policy
 ```    
 
 
@@ -61,5 +63,5 @@ Youtube IAM Policy Evaluation Series: policy evaluation chains | Amazon Web Serv
 https://www.youtube.com/watch?v=YQsK4MtsELU
 
 
-IAM tests
+# IAM tests
 https://github.com/awslabs/terraform-iam-policy-validator?tab=readme-ov-file
